@@ -13,6 +13,10 @@ module.exports = {
       schema: process.env.NEXT_PUBLIC_CHAIN_BLOCKS_SUBGRAPH_URL,
       documents: "./packages/graphql/src/modules/chain/query.ts",
     },
+    pol: {
+      schema: process.env.NEXT_PUBLIC_POL_SUBGRAPH_URL,
+      documents: "./packages/graphql/src/modules/pol/query.ts",
+    },
     balancerApi: {
       schema: process.env.NEXT_PUBLIC_BALANCER_API_URL,
       documents: [

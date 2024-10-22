@@ -5506,7 +5506,7 @@ export type GetBgtInflationQueryResult = Apollo.QueryResult<
 >;
 export const GetUserValidatorInformationDocument = gql`
     query GetUserValidatorInformation($address: Bytes!) {
-  userValidatorInformations(where: {user: $address}) {
+  userValidatorInformations(where: {user: $address}, first: 1000) {
     id
     amountQueued
     amountDeposited
@@ -6607,7 +6607,7 @@ export const GetBgtInflation = gql`
     `;
 export const GetUserValidatorInformation = gql`
     query GetUserValidatorInformation($address: Bytes!) {
-  userValidatorInformations(where: {user: $address}) {
+  userValidatorInformations(where: {user: $address}, first: 1000) {
     id
     amountQueued
     amountDeposited

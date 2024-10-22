@@ -17,7 +17,7 @@ export default gql`
   }
 
   query GetUserValidatorInformation($address: Bytes!) {
-    userValidatorInformations(where: { user: $address }) {
+    userValidatorInformations(where: { user: $address }, first: 1000) {
       id
       amountQueued
       amountDeposited
